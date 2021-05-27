@@ -1,4 +1,5 @@
 var five=require("johnny-five");
+
 var board=new five.Board({
     port:"/dev/cu.usbmodem112301"
 });
@@ -7,18 +8,11 @@ board.on("ready",function(){
     console.log("Placa conectada");
     var led1=new five.Led(5);
     var led2=new five.Led(6);
-
     led1.on();
-    led2.on();
-    let cont=0;
-    board.loop(500,function(){
+    led2.off();
+    led2.blink(500,function(){
         led1.toggle();
-        cont++;
-        if(cont==6){
-            led2.toggle();
-            cont=0;
-        }
     })
 })
 
-console.log("Intentando conectar con la placa")
+console.log("Esperando la conexión con la placa...");

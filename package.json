@@ -9,6 +9,7 @@
   "author": "Jorge Sanchez",
   "license": "ISC",
   "dependencies": {
-    "johnny-five": "^2.0.0"
+    "johnny-five": "^2.0.0",
+    "nodebots-interchange": "^2.1.3"
   }
 }
