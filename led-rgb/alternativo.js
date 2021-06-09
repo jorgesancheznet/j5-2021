@@ -1,21 +1,21 @@
 var five=require("johnny-five");
 var board=new five.Board({
-    port:"COM3"
+    port:"/dev/tty.usbmodem112201"
 });
 
 board.on("ready",function(){
     console.log("Placa conectada");
     var led=new five.Led.RGB({
         pins:{
-            red:9,
+            red:11,
             green:10,
-            blue:11
+            blue:9
         }
     });
     var rojo=0;
     var verde=0;
     var azul=0;
-    cont=0;
+    cont=1;
 
     board.loop(1000,function(){
        if(cont==1){
