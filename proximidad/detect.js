@@ -1,7 +1,7 @@
 var five=require("johnny-five");
 
 var board=new five.Board({
-    port:"/dev/cu.usbmodem112301"
+    port:"/dev/cu.usbmodem12201"
 });
 
 board.on("ready",function(){
@@ -19,4 +19,4 @@ board.on("ready",function(){
     })
 })
 
-console.log("Esperando la conexión con la placa...");
+console.log("Esperando lhca conexión con la placa...");

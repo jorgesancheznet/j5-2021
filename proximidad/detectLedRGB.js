@@ -1,7 +1,7 @@
 var five=require("johnny-five");
 
 var board=new five.Board({
-    port:"/dev/tty.usbmodem112201"
+    port:"/dev/tty.usbmodem12201"
 });
 
 board.on("ready",function(){
@@ -13,10 +13,10 @@ board.on("ready",function(){
     var led=new five.Led.RGB([11,10,9]);
     led.color("blue");
     sensor.on("change",function(){
-        if(sensor.cm<8){
+        if(sensor.cm<5){
             led.color("red");
         }
-        else if(sensor.cm<15){
+        else if(sensor.cm<=10){
             led.color("green");
         }
         else{

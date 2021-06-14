@@ -1,6 +1,6 @@
 var five=require("johnny-five");
 var board=new five.Board({
-    port:"/dev/tty.usbmodem112201"
+    port:"/dev/tty.usbmodem12201"
 });
 
 board.on("ready",function(){
