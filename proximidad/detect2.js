@@ -10,6 +10,9 @@ board.on("ready",function(){
         controller: "HCSR04",
         pin: 7
     });
+
+
+
     var led1=new five.Led(5);
 
 
